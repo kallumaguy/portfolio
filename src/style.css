@@ -1,0 +1,49 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  
+  line-height: 1.5;
+  
+  padding: 0;
+  
+ 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 2px solid red; */
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* Track color (background of the scrollbar) */
+}
+
+::-webkit-scrollbar-thumb  {
+  background: #6a11cb; 
+}
+
+
+
+
+
+
+
+
