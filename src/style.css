@@ -19,6 +19,7 @@
 
 html{
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; 
 }
 
 * {
@@ -27,18 +28,28 @@ html{
   /* border: 2px solid red; */
 }
 
-/* Custom scrollbar styling */
+/* Custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 5px; /* Thin scrollbar */
+  height: 5px; /* For horizontal scrollbars */
 }
 
+/* Scrollbar Track */
 ::-webkit-scrollbar-track {
   background: #f1f5f9; /* Track color (background of the scrollbar) */
 }
 
-::-webkit-scrollbar-thumb  {
-  background: #6a11cb; 
+/* Scrollbar Thumb (Draggable part) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient effect */
 }
+
+/* Scrollbar Thumb on Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #4b0ea5, #1a5fd3);
+}
+
+
 
 
 

@@ -1,26 +1,11 @@
-// Select the toggle button and the icon
-const toggleButton = document.getElementById("theme-toggle");
-const themeIcon = document.getElementById("theme-icon");
-const htmlElement = document.documentElement;
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init(); // Initialize AOS
+});
 
-// Initialize theme based on localStorage
-if (localStorage.getItem("theme") === "dark") {
-  htmlElement.classList.add("dark");
-  themeIcon.textContent = "🌙"; // Moon icon for dark mode
-} else {
-  htmlElement.classList.remove("dark");
-  themeIcon.textContent = "🌞"; // Sun icon for light mode
-}
-
-// Toggle theme on button click
-toggleButton.addEventListener("click", () => {
-  if (htmlElement.classList.contains("dark")) {
-    htmlElement.classList.remove("dark");
-    themeIcon.textContent = "🌞";
-    localStorage.setItem("theme", "light");
-  } else {
-    htmlElement.classList.add("dark");
-    themeIcon.textContent = "🌙";
-    localStorage.setItem("theme", "dark");
-  }
+AOS.init({
+  offset: 25, // Offset (in px) from the original trigger point
+  delay: 0, // Delay time (in ms) before the animation starts
+  duration: 500, // Duration of the animation (in ms)
+  easing: "ease", // Easing function for the animation
+  once: true, // Run animation once (true) or every time (false)
 });
